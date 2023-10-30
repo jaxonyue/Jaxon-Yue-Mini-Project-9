@@ -3,7 +3,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 
 # Read the uploaded csv file
-df = pd.read_csv("Development of average annual wages.csv")
+df = pd.read_csv("Development of Average Annual Wages.csv")
 
 # Get the # of rows and columns of the dataframe
 rows = df.shape[0]

@@ -1,5 +1,6 @@
 from main import median, rows, columns
 
+
 def test_main():
     assert median == 50564.5
     assert rows == 38
