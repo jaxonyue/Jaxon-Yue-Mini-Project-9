@@ -2,21 +2,13 @@ install:
 	pip install --upgrade pip &&\
 		pip install -r requirements.txt
 
-test:
-	python -m pytest -vv --cov=main  test_*.py
-
 format:	
 	black *.py 
 
 lint:
-	ruff check *.py 
+	pylint --disable=R,C *.py
 
-container-lint:
-	docker run --rm -i hadolint/hadolint < Dockerfile
+test:
+	python -m pytest -vv --cov=main test_*.py
 
-refactor: format lint
-
-deploy:
-	#deploy goes here
-		
-all: install lint test format deploy
+all: install lint format test
